@@ -1,78 +1,137 @@
+/* Estilos globais e reset de margens */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
+/* Altura total da página e remoção de margens */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-header {
-  background-color: #6b6ed1;
-  padding: 30px;
+/* Wrapper que envolve todo o conteúdo da página */
+.wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o conteúdo tenha, no mínimo, a altura da tela */
 }
 
-.logo img {
-  width: 50px;
+/* Navbar - barra de navegação */
+.navbar {
+  background-color: #e74c3c; /* Cor de fundo da barra */
+  display: flex; /* Exibe os elementos como flexbox */
+  justify-content: space-between; /* Espaçamento entre logo, links e ícones */
+  align-items: center; /* Centraliza os itens verticalmente */
+  padding: 10px 20px; /* Espaçamento interno */
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
+/* Estilos para a lista de links na navbar */
+.navbar ul {
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex; /* Exibe os links em linha */
+  gap: 15px;
+  margin-left: auto; /* Espaço entre os links */
 }
 
-nav ul li {
-  margin-right: 30px;
+/* Estilos para os links da navbar */
+.navbar ul a {
+  color: white; /* Cor branca para os links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-weight: bold; /* Deixa o texto dos links em negrito */
 }
 
-nav ul li a {
-  color: black;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+/* Estilos para o logo da navbar */
+.navbar img {
+  height: 50px; /* Altura do logo */
 }
 
-.social-icons a img {
-  width: 24px;
-  margin-left: 10px;
+/* Estilos para os ícones sociais na navbar */
+.navbar div img {
+  width: 25px; /* Largura dos ícones sociais */
+  margin-left: 10px; /* Espaço entre os ícones sociais */
 }
 
+/* Main - seção principal da página */
 main {
+  flex: 1; /* Faz o conteúdo ocupar todo o espaço disponível */
   display: flex;
-  padding: 40px;
-  justify-content: space-around;
+  flex-direction: column; /* Coloca as seções de conteúdo em coluna */
+  gap: 30px; /* Espaço entre as seções de conteúdo */
+  padding: 50px 20px; /* Espaçamento interno do conteúdo */
 }
 
-.image-container img {
-  width: 300px;
-  border-radius: 10px;
+/* Estilos para cada seção de conteúdo (content) */
+.content {
+  display: flex;
+  justify-content: space-between; /* Espaça a imagem e o texto */
+  align-items: center; /* Centraliza verticalmente a imagem e o texto */
+  max-width: 1000px; /* Largura máxima da seção */
+  margin: 0 auto; /* Centraliza horizontalmente a seção na página */
 }
 
-.text-container {
-  max-width: 600px;
+/* Estilos para as imagens dentro das seções de conteúdo */
+.content img {
+  width: 500px; /* Define a largura das imagens */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
-.text-container h1 {
-  color: #ff3c4a;
-  font-size: 36px;
-  margin-bottom: 20px;
+/* Estilos para o bloco de texto dentro das seções de conteúdo */
+.content div {
+  max-width: 500px; /* Largura máxima do texto */
 }
 
-.text-container p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
+/* Estilos para os títulos das seções */
+.content h1 {
+  padding: 20px; /* Espaçamento interno no título */
+  color: #e74c3c; /* Cor do título */
+  font-size: 36px; /* Tamanho da fonte do título */
+  margin-bottom: 15px; /* Espaço abaixo do título */
 }
 
-.text-container a.read-more {
-  display: inline-block;
-  margin-top: 20px;
-  color: #ff3c4a;
-  text-decoration: none;
-  font-weight: bold;
+/* Estilos para os parágrafos dentro das seções de conteúdo */
+.content p {
+  padding: 20px; /* Espaçamento interno no parágrafo */
+  font-size: 18px; /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha (espaçamento entre as linhas) */
+  margin-bottom: 10px; /* Espaço abaixo do parágrafo */
+}
+
+/* Estilos para o link "Read More" */
+.read-more {
+  margin-left: 20px; /* Espaço à esquerda do botão */
+  display: inline-block; /* Faz o link se comportar como um botão */
+  padding: 8px 15px; /* Espaçamento interno do botão */
+  color: #e74c3c; /* Cor do texto do botão */
+  border: 2px solid #e74c3c; /* Borda do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilos para o efeito hover no link "Read More" */
+.read-more:hover {
+  background-color: #e74c3c; /* Cor de fundo quando o link é hover */
+  color: white; /* Cor do texto quando o link é hover */
+}
+
+/* Footer - rodapé da página */
+footer {
+  background-color: #e74c3c; /* Cor de fundo do rodapé */
+  color: white; /* Cor do texto no rodapé */
+  text-align: center; /* Alinha o texto no centro */
+  padding: 20px; /* Espaçamento interno no rodapé */
+  width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+}
+
+/* Estilos para os links no rodapé */
+footer a {
+  color: white; /* Cor branca para os links no rodapé */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Efeito hover nos links do rodapé */
+footer a:hover {
+  text-decoration: underline; /* Adiciona sublinhado no hover */
 }
